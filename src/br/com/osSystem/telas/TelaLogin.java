@@ -29,7 +29,8 @@ public class TelaLogin extends javax.swing.JFrame {
             pst = conexao.prepareStatement(sql);
 
             pst.setString(1, userField.getText());
-            pst.setString(2, passwordField.getText());
+            String captura = new String(passwordField.getPassword());
+            pst.setString(2, captura);
 
             rs = pst.executeQuery();
 
